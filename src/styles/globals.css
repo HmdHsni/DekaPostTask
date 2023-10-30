@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(../assets/fonts/fontvazir.css);
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Vazir;
+}
+body {
+  direction: rtl;
+  background-color: #fff;
+  font-family: Vazir;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: Vazir;
+  box-sizing: border-box;
+}

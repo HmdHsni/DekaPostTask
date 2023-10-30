@@ -1,0 +1,81 @@
+﻿@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 100;
+  src: url("woff/Vazir-Thin.woff") format("woff"),
+    url("woff2/Vazir-Thin.woff2") format("woff2"),
+    url("eot/Vazir-Thin.eot") format("eot"),
+    url("ttf/Vazir-Thin.ttf") format("truetype");
+}
+
+/* @font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 200;
+  src: url("woff/IRANSansX-UltraLight.woff") format("woff"),
+    url("woff2/IRANSansX-UltraLight.woff2") format("woff2");
+} */
+
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 300;
+  src: url("woff/Vazir-Light.woff") format("woff"),
+  url("woff2/Vazir-Light.woff2") format("woff2"),
+  url("eot/Vazir-Light.eot") format("eot"),
+  url("ttf/Vazir-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 500;
+  src: url("woff/Vazir-Medium.woff") format("woff"),
+  url("woff2/Vazir-Medium.woff2") format("woff2"),
+  url("eot/Vazir-Medium.eot") format("eot"),
+  url("ttf/Vazir-Medium.ttf") format("truetype");
+}
+
+/* @font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 600;
+  src: url("woff/IRANSansX-DemiBold.woff") format("woff"),
+    url("woff2/IRANSansX-DemiBold.woff2") format("woff2");
+} */
+
+/* @font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 800;
+  src: url("woff/IRANSansX-ExtraBold.woff") format("woff"),
+    url("woff2/IRANSansX-ExtraBold.woff2") format("woff2");
+} */
+
+/* @font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: 900;
+  src: url("woff/IRANSansX-Black.woff") format("woff"),
+    url("woff2/IRANSansX-Black.woff2") format("woff2");
+} */
+
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: bold;
+  src: url("woff/Vazir-Bold.woff") format("woff"),
+  url("woff2/Vazir-Bold.woff2") format("woff2"),
+  url("eot/Vazir-Bold.eot") format("eot"),
+  url("ttf/Vazir-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: normal;
+  src: url("woff/Vazir.woff") format("woff"),
+  url("woff2/Vazir.woff2") format("woff2"),
+  url("eot/Vazir.eot") format("eot"),
+  url("ttf/Vazir.ttf") format("truetype");
+}
