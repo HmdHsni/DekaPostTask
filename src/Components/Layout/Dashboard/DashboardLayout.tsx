@@ -31,14 +31,14 @@ const DashboardLayout = ({ children }: any) => {
       />
     </div>
     <div className=" ">
-      <div className="flex  flex-row-reverse gap-x-4  mt-6 md:mt-[72px] px-[12px]  ">
+      <div className="flex  flex-row-reverse gap-x-4  mt-6  px-[12px]  ">
         <div className=" max-h-[calc(100vh-168px)] rounded-cs  ">
        
           <Sidebar />
         </div>
        
-        <div className="flex-1 bg-slate-100 rounded">
-          {/* <Dashboard/> */}
+        <div className="flex-1 bg-slate-100 dark:bg-black rounded">
+        
           {children}</div>
       </div>
     </div>

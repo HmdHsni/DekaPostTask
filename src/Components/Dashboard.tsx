@@ -56,7 +56,7 @@ const Dashboard: React.FC = () => {
       },[])
 
   return (
-    <div className='flex flex-col justify-center items-center mt-[100px] text-xl font-bold text-blue-700 '>
+    <div className='flex flex-col justify-center items-center mt-[100px] text-xl font-bold text-blue-700 dark:text-white '>
       <h1>{time}</h1>
      <div className='flex flex-row justify-center'>
      <h1 className='px-1'>{getGreeting()}</h1>

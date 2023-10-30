@@ -6,7 +6,7 @@ export function Sidebar() {
     const location = useLocation();
     return (
        
-        <div className='w-[200px] h-[400px] bg-white shadow-lg rounded-md'>
+        <div className='w-[200px] h-[450px] bg-white dark:bg-black  shadow-lg rounded-md '>
             {AdminAccess && AdminAccess.map((item,index)=>{
                 return(
                     <div  key={index} 
@@ -14,13 +14,8 @@ export function Sidebar() {
                         if (item.link) {
                             navigate(item.link);
                         } 
-                        // else if (select === item.id) {
-                        //   setSelect(null);
-                        // } else {
-                        //   setSelect(item.id);
-                        // }
                       }}
-                     className='w-full flex justify-end px-3 gap-x-3 mt-5
+                     className='w-full flex justify-end px-3 gap-x-3 pt-5
                        text-gray-900 font-normal'>
                         <span className='text-gray-400 text-base  cursor-pointer'>{item.label}</span>
                         <div className='text-blue-300  text-2xl  cursor-pointer'>{item.icon}</div>

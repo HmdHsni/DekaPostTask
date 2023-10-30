@@ -68,7 +68,7 @@ console.log(tasks, "tasks");
        w-[600px] border border-blue-900 "
       >
         <thead>
-          <tr className="text-right border-b-2 border-blue-900 ">
+          <tr className="text-right border-b-2 border-blue-900 text-blue-900 dark:text-white ">
             <th className="pr-5 ">حذف</th>
             <th className="pr-5">ویرایش</th>
             <th className="pr-5">وظیفه روزانه</th>
@@ -77,20 +77,20 @@ console.log(tasks, "tasks");
         <tbody>
           {userTask &&
             userTask.map((tsk: any, index: number) => (
-              <tr key={index} className="border-b-2 border-blue-900 ">
+              <tr key={index} className="border-b-2 border-blue-900 text-blue-900 dark:text-white ">
                 <td
-                  className="text-right  text-xl  text-red-500 bg-yellow-50 flex justify-end cursor-pointer"
+                  className="text-right  text-xl  text-red-500  flex justify-end cursor-pointer"
                   onClick={() => handleDelete(tsk.id)}
                 >
                   <AiOutlineMinusCircle />
                 </td>
                 <td
-                  className="text-right text-xl  text-blue-900 bg-yellow-300 cursor-pointer"
+                  className="text-right text-xl  text-blue-900  cursor-pointer"
                   onClick={() => handleEdit(tsk.id)}
                 >
                   <FiEdit2 />
                 </td>
-                <td className="text-right  pr-5 bg-yellow-800">
+                <td className="text-right  pr-5 ">
                   {tsk.description}
                 </td>
               </tr>

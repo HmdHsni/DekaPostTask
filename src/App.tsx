@@ -7,6 +7,8 @@ import { Todos } from './Components/Todos';
 import { Wheather } from './Components/Wheather';
 import { Profile } from './Components/Profile';
 import Dashboard from './Components/Dashboard';
+import { ThemeProvider } from './Components/ThemeProvider ';
+import ThemeToggle from './Components/ThemeToggle';
 
 
 
@@ -20,6 +22,8 @@ function App() {
       <div className=' col-span-12  text-center'>خوش آمدید</div>
     </div> */}
 {/* </DashboardLayout> */}
+<ThemeProvider>
+  <ThemeToggle/>
 <DashboardLayout>
       <Routes>
       <Route path="/dashboard" element={<Dashboard />} />
@@ -28,6 +32,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </DashboardLayout>
+    </ThemeProvider>
  </div>
   );
 }
