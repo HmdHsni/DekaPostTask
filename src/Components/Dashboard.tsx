@@ -24,6 +24,7 @@ const Dashboard: React.FC = () => {
     const getGreeting = (): string => {
         const hour = moment().tz(timezone).hour();
         if (hour < 12) return "صبح شما بخیر ";
+        else if(hour <15) return "ظهر بخیر"
         else if (hour < 20) return " عصرتون بخیر";
         return " شبتون بخیر";
       };
@@ -59,7 +60,7 @@ const Dashboard: React.FC = () => {
       <h1>{time}</h1>
      <div className='flex flex-row justify-center'>
      <h1 className='px-1'>{getGreeting()}</h1>
-      {isUserNamePresent ? (<span>{showName}</span>) : (<span>کاربر عزیز</span>)}
+      {isUserNamePresent ? (<span>{showName} عزیز</span>) : (<span>کاربر عزیز</span>)}
      </div>
 
     </div>

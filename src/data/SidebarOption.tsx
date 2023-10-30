@@ -40,3 +40,9 @@ export const AdminAccess = [
         child: [],
     },
   ];
+  export const todosList=[
+    {id :1 , description:"تسک 1 "},
+    {id :2 , description:"تسک 2 "},
+    {id :3 , description:"تسک 3 "},
+    {id :4 , description:"تسک 4 "},
+  ]
