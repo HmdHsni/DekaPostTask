@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Formik, Form, Field } from "formik";
 import { useTheme } from "./ThemeProvider ";
-
+import toast, { Toaster } from "react-hot-toast";
 interface MyFormValues {
   firstName: string;
   selectedCity: string;
@@ -27,8 +27,10 @@ export function Profile() {
           <Formik
             initialValues={initialValues}
             onSubmit={(values, actions) => {
-              console.log({ values, actions });
-              alert(JSON.stringify(values, null, 2));
+              // toast.success("تغییرات با موفقیت ذخیره شد" ,{
+              //   position: "top-center",
+              // })
+              alert("تغییرات با موفقیت ذخیره شد");
               actions.setSubmitting(false);
               localStorage.setItem(
                 "userName",
@@ -51,12 +53,16 @@ export function Profile() {
                 className="bg-gray-50 border  focus:outline-none border-gray-300 text-gray-900 text-sm text-right rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
 
-            <div className="flex justify-center my-3">
-            <select  className="bg-gray-50 border  focus:outline-none border-gray-300 text-gray-900 text-sm text-right rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={handleThemeChange} value={theme}>
-                <option value="light">تم روشن </option>
-                <option value="dark"> تم تیره</option>
-              </select>
-            </div>
+              <div className="flex justify-center my-3">
+                <select
+                  className="bg-gray-50 border  focus:outline-none border-gray-300 text-gray-900 text-sm text-right rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  onChange={handleThemeChange}
+                  value={theme}
+                >
+                  <option value="light">تم روشن </option>
+                  <option value="dark"> تم تیره</option>
+                </select>
+              </div>
 
               <button
                 type="submit"

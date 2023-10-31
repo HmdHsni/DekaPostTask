@@ -79,13 +79,13 @@ console.log(tasks, "tasks");
             userTask.map((tsk: any, index: number) => (
               <tr key={index} className="border-b-2 border-blue-900 text-blue-900 dark:text-white ">
                 <td
-                  className="text-right  text-xl  text-red-500  flex justify-end cursor-pointer"
+                  className="text-right pr-4 text-xl  text-red-500  flex justify-end cursor-pointer"
                   onClick={() => handleDelete(tsk.id)}
                 >
                   <AiOutlineMinusCircle />
                 </td>
                 <td
-                  className="text-right text-xl  text-blue-900  cursor-pointer"
+                  className=" pl-[165px] text-xl  text-blue-900  cursor-pointer"
                   onClick={() => handleEdit(tsk.id)}
                 >
                   <FiEdit2 />

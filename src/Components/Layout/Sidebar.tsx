@@ -15,8 +15,8 @@ export function Sidebar() {
                             navigate(item.link);
                         } 
                       }}
-                     className='w-full flex justify-end px-3 gap-x-3 pt-5
-                       text-gray-900 font-normal'>
+                     className={`w-full flex justify-end px-3 gap-x-3 pt-5
+                      ${location.pathname==item.link ? " font-bold text-blue-950 dark:text-white dark:font-bold" : " text-gray-900  font-normal"}`}>
                         <span className='text-gray-400 text-base  cursor-pointer'>{item.label}</span>
                         <div className='text-blue-300  text-2xl  cursor-pointer'>{item.icon}</div>
                         

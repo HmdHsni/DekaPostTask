@@ -25,6 +25,7 @@ function App() {
 <ThemeProvider>
   <ThemeToggle/>
 <DashboardLayout>
+    
       <Routes>
       <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/todos" element={<Todos />} />
