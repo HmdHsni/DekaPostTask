@@ -7,6 +7,7 @@ import { Todos } from "../../Todos";
 import { BsBell } from "react-icons/bs";
 import toast, { Toaster } from "react-hot-toast";
 import Dashboard from "../../Dashboard";
+import { t } from "i18next";
 const DashboardLayout = ({ children }: any) => {
   const [existName, setExistName] = useState<any>();
   useEffect(() => {
@@ -16,7 +17,7 @@ const DashboardLayout = ({ children }: any) => {
 
     setExistName(isUserNamePresent);
     if (existName == null) {
-      toast.success(" لطفا نام کاربری خود را تغییر دهید ", {
+      toast.success(t("please change your user name"), {
         position: "top-center",
       });
     }
@@ -29,7 +30,7 @@ const DashboardLayout = ({ children }: any) => {
         <Navbar />
       </div>
       <div className=" ">
-        <div className="flex  flex-row-reverse gap-x-4  mt-6  px-[12px]  ">
+        <div className="flex  flex-row gap-x-4  mt-6  px-[12px]  ">
           <div className=" max-h-[calc(100vh-168px)] rounded-cs  ">
             <Sidebar />
           </div>

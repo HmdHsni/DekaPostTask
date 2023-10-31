@@ -4,18 +4,18 @@ import {
   } from "react-icons/bs";
   import { WiDayRainWind } from "react-icons/wi"
   import { FcTodoList } from "react-icons/fc";
-  import {AiOutlineUser} from "react-icons/ai"
+  import {AiOutlineUser} from "react-icons/ai";
 export const AdminAccess = [
     {
       id: 0,
-      label: "داشبورد",
+      label: "dashboard",
       icon: <BsGrid/>,
       link: "/dashboard",
       child: [],
     },
     {
       id: 1,
-      label: "  لیست وظایف",
+      label: "todoList",
       icon: <FcTodoList />,
       value: "",
       link: "/todos",
@@ -23,7 +23,7 @@ export const AdminAccess = [
     },
     {
       id: 2,
-      label: " آب و هوا",
+      label: "weather",
       icon: <WiDayRainWind />,
       value: "",
       link:"/weather",
@@ -33,7 +33,7 @@ export const AdminAccess = [
   
     {
         id: 3,
-        label: "   پروفایل",
+        label: "profile",
         icon: <AiOutlineUser />,
         value: "",
         link: "/profile",

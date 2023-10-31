@@ -1,5 +1,6 @@
 import React from "react";
 import { useTheme } from "./ThemeProvider ";
+import { t } from "i18next";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
@@ -14,7 +15,7 @@ const ThemeToggle = () => {
         className="bg-slate-200 dark:bg-slate-600 rounded-md p-2 my-3 text-blue-900 dark:text-white "
         onClick={toggleTheme}
       >
-        {theme === "light" ? "انتخاب تم تیره   " : "انتخاب تم روشن"}
+        {theme === "light" ?t("dark")  :t("light") }
       </button>
     </div>
   );

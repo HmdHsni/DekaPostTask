@@ -3,6 +3,8 @@ import { Formik, Form, Field } from 'formik';
 import { citiesOfIran } from '../data/citiesName';
 import toast, { Toaster } from "react-hot-toast";
 import axios from"axios";
+import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 interface MyFormValues {
   selectedCity: string;
   cities: Array<string>;
@@ -44,7 +46,8 @@ const sendRequestForWethear=(city:any)=>{
     selectedCity: localStorage.getItem("city") || '',
     cities: listOfCities,
   };
-
+  const { i18n } = useTranslation();
+  const isRtl = i18n.language === 'fa';
   return (
     <div className='flex flex-col justify-center items-center mt-10'>
       <div>
@@ -60,7 +63,7 @@ const sendRequestForWethear=(city:any)=>{
           
         {({ values, setFieldValue }) => (
           <Form>
-            <label htmlFor="selectedCity" className="block mb-3 text-sm font-medium text-blue-900 dark:text-white text-center mt-4"> انتخاب شهر</label>
+            <label htmlFor="selectedCity" className="block mb-3 text-sm font-medium text-blue-900 dark:text-white text-center mt-4"> {t("select city")}</label>
             <Field 
               as="select" id="selectedCity" name="selectedCity"
               className="bg-gray-50 border focus:outline-none border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
@@ -78,7 +81,7 @@ const sendRequestForWethear=(city:any)=>{
               }
               value={values.selectedCity}
             >
-              <option value=""> شهر مورد نظر را انتخاب کنید </option>
+              <option value="">{t("select from list")}</option>
               {initialValues.cities.map((city,index) => (
                 <option key={index} value={city}>{city}</option>
               ))}
@@ -86,11 +89,14 @@ const sendRequestForWethear=(city:any)=>{
           </Form>)}
         </Formik>
         <div className='flex flex-col gap-3 bg-slate-500 text-white dark:text-black dark:bg-slate-50 mt-4 rounded-md p-4 items-center justify-center '>
-          {selectedCity ? (<p>{selectedCity}</p>) :(<p>شهر</p>)}
+          {selectedCity ? (<p>{selectedCity}  </p>) :(<p>{t("city")}</p>)}
           {tempCity ?(
-            <p>{tempCity}</p>
-          ) : (<p> دمای شهر</p>)}
-          <p>state</p>
+         
+            <p className={isRtl ? "flex flex-row-reverse gap-x-1" :" flex flex-row gap-x-1"}>{tempCity} <span>{t("°C")}</span></p>
+            
+         
+          ) : (<p>{t("temp")}</p>)}
+      
         </div>
       </div>
     </div>

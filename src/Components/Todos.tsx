@@ -4,11 +4,11 @@ import { todosList } from "../data/SidebarOption";
 import { FiEdit2 } from "react-icons/fi";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 import { json } from "node:stream/consumers";
+import { t } from "i18next";
 export function Todos() {
   const [userTask, setUserTask] = useState<any>([]);
   const [selectedTask, setSelectedTask] = useState<number>();
   const [userTaskStorage , setUserTaskStorage]=useState<boolean>(false);
-  console.log(selectedTask, "selectedtask");
   const todosList=[
     {id :1 , description:"تسک 1 "},
     {id :2 , description:"تسک 2 "},
@@ -17,15 +17,6 @@ export function Todos() {
     {id :5 , description:"تسک 5 "},
   ]
   useEffect(() => {
-    
-    // const tskArray: any = [];
-    // todosList.forEach((task) => {
-    //   tskArray.push(task);
-      
-    // });
-    // setUserTask(tskArray);
-   
-    
     localStorage.setItem("tskArray", JSON.stringify(todosList));
     setUserTaskStorage(true);
   }, []);
@@ -43,9 +34,6 @@ console.log(tasks, "tasks");
     setUserTask(updatedTasks);
    
   };
-  console.log(userTask, "userTask");
-  
-
   const handleEdit = (taskId: number) => {
     const newDescription = prompt("Edit your task:");
     if (newDescription) {
@@ -61,7 +49,7 @@ console.log(tasks, "tasks");
   return (
     <div className="flex flex-col mt-10 gap-y-3 items-center">
       <h1 className="flex justify-center items-center text-base font-bold text-blue-900 dark:text-white">
-        لیست وظایف روزانه
+        {t("list of todos")}
       </h1>
       <table
         className="table-fixed border-collapse
@@ -69,9 +57,9 @@ console.log(tasks, "tasks");
       >
         <thead>
           <tr className="text-right border-b-2 border-blue-900 text-blue-900 dark:text-white ">
-            <th className="pr-5 ">حذف</th>
-            <th className="pr-5">ویرایش</th>
-            <th className="pr-5">وظیفه روزانه</th>
+            <th className="pr-5 ">{t("delete")}</th>
+            <th className="pr-5">{t("edit")}</th>
+            <th className="pr-5"> {t("tasks")}</th>
           </tr>
         </thead>
         <tbody>
