@@ -13,8 +13,6 @@ const DashboardLayout = ({ children }: any) => {
   useEffect(() => {
     const userName = localStorage.getItem("userName");
     const isUserNamePresent = userName && userName.trim() == "";
-    // console.log(isUserNamePresent ,"isUserNamePresent");
-
     setExistName(isUserNamePresent);
     if (existName == null) {
       toast.success(t("please change your user name"), {
@@ -22,10 +20,8 @@ const DashboardLayout = ({ children }: any) => {
       });
     }
   }, []);
-  console.log(existName, "isUserNamePresent");
-
   return (
-    <div>
+    <div className="max-w-[1440px]">
       <div className="">
         <Navbar />
       </div>
@@ -43,5 +39,4 @@ const DashboardLayout = ({ children }: any) => {
     </div>
   );
 };
-
 export default DashboardLayout;

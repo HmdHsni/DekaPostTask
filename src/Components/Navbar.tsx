@@ -10,7 +10,7 @@ export function Navbar() {
          <li className='relative cursor-pointer duration-100 hover:text-gray-900 text-left   hover:font-bold hover:opacity-100 text-base dark:text-white list-none'>{t("home")}</li>
          <li className='relative cursor-pointer duration-100 hover:text-gray-900 text-left   hover:font-bold hover:opacity-100 text-base dark:text-white list-none'>{t("about us")} </li>
          <li className='relative cursor-pointer duration-100 hover:text-gray-900 text-left   hover:font-bold hover:opacity-100 text-base dark:text-white  list-none'>{t("weblog")}</li>
-        <li className='relative cursor-pointer duration-100 hover:text-gray-900 text-left   hover:font-bold hover:opacity-100 text-base dark:text-white list-none'>{t("cuntact us")} </li>
+        <li className='relative cursor-pointer duration-100 hover:text-gray-900 text-left   hover:font-bold hover:opacity-100 text-base dark:text-white list-none'>{t("contact us")} </li>
        </nav>
               
            </header>

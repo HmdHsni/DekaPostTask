@@ -20,7 +20,6 @@ function App() {
 <ThemeProvider>
   <ThemeToggle/>
 <DashboardLayout>
-    
       <Routes>
       <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/todos" element={<Todos />} />
@@ -32,5 +31,4 @@ function App() {
  </div>
   );
 }
-
 export default App;

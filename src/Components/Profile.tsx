@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Formik, Form, Field } from "formik";
 import { useTheme } from "./ThemeProvider ";
 import toast, { Toaster } from "react-hot-toast";
-import LanguageSwitcher from './LanguageSwitcher';
+import LanguageSwitcher from "./LanguageSwitcher";
 import { t } from "i18next";
 interface MyFormValues {
   firstName: string;
@@ -17,11 +17,9 @@ export function Profile() {
     selectedCity: "",
     cities: ["City A", "City B", "City C"],
   };
-
   const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setTheme(event.target.value as "light" | "dark");
   };
-
   return (
     <div className={theme === "dark" ? "dark" : ""}>
       <div className="flex flex-col justify-center items-center mt-10">
@@ -45,7 +43,7 @@ export function Profile() {
                 htmlFor="firstName"
                 className="block mb-3 text-sm font-medium text-blue-900 dark:text-white text-center"
               >
-               {t("Change Username")}
+                {t("Change Username")}
               </label>
               <Field
                 id="firstName"
@@ -64,19 +62,17 @@ export function Profile() {
                   <option value="dark"> {t("dark")} </option>
                 </select>
               </div>
-              <LanguageSwitcher/>
+              <LanguageSwitcher />
               <button
                 type="submit"
                 className="text-white ml-7 mt-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
-              {t("save changes")}
+                {t("save changes")}
               </button>
             </Form>
-            
           </Formik>
         </div>
       </div>
-      
     </div>
   );
 }
